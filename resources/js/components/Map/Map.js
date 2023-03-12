@@ -54,9 +54,11 @@ const Map = ({API, API_KEY}) => {
         );
         setWeatherHistory(response.data.data);
     };
+    const showHideSideBar = (show) => document.getElementsByClassName('sidebar')[0]?.setAttribute('style', `z-index: ${show ? '1' : '-1'};`);
     useEffect(() => {
         fetchData();
     }, []);
+    useEffect(() => showHideSideBar(selectedCity), [selectedCity]);
 
     // MIAMI COORDENADAS
     const position = [25.7741728, -80.1918];
@@ -80,7 +82,7 @@ const Map = ({API, API_KEY}) => {
                 ))}
             </MapContainer>
             {selectedCity && (
-                <History city={selectedCity} weatherHistory={weatherHistory}/>
+                <History city={selectedCity} weatherHistory={weatherHistory} showHideSideBar={showHideSideBar}/>
             )}
         </>
     );
