@@ -1,0 +1,82 @@
+@import 'base/typography';
+@import 'base/mixins';
+@import 'base/utilities';
+@import 'pages/app';
+@import 'components/history';
+@import 'components/map';
+@import 'layout/sidebar';
+
+body {
+    @include body-margin;
+    @include body-font;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-gray-900 {
+    color: rgb(17 24 39);
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+.rounded {
+    border-radius: 0.375rem;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-1\/2 {
+    width: 50%;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.border {
+    border-width: 1px;
+}
+
+button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+    text-transform: none;
+    margin: 0;
+}
+
+.text-dark {
+    color: rgb(255, 255, 255, 1);
+}
+
+.text-dark:hover {
+    color: rgb(25, 255, 255, 1);
+}
+
+.bg-dark-700 {
+    background-color: rgb(55, 65, 81, 1);
+}
+
+.bg-dark-600:hover {
+    background-color: rgb(75, 85, 99, 1);
+}
+
+.border-dark-600 {
+    border-color: rgb(75, 85, 99, 1);
+}

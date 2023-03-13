@@ -1,0 +1,7 @@
+@mixin body-margin {
+    margin: 0;
+}
+
+@mixin body-font {
+    font-family: $font-family;
+}
